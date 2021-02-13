@@ -85,7 +85,7 @@ namespace DrinkCalculator.TabDeliLocalization
             }
             else if (value == null && locale.Split('-').Length == 1)
             {
-                value = LocalizationTexts.FirstOrDefault(f => f.CultureName.StartsWith(locale, StringComparison.InvariantCultureIgnoreCase) && f.MessageName == messageName);
+                value = LocalizationTexts.FirstOrDefault(f => f.CultureName!.StartsWith(locale, StringComparison.InvariantCultureIgnoreCase) && f.MessageName == messageName);
             }
             else if (value != null && value.Message == null) // fall back to a generic culture..
             {
