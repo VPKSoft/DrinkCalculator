@@ -1,0 +1,42 @@
+This is the simple tab-delimited localization file.
+As you can see only the "[]" tags and tab delimited key-value pairs matter for the localization.
+The tab-delimited text can also include comments, etc. by adding a new tab-delimited field.
+[en-US]
+txtGallons	gallons
+txtQuarts	quarts
+txtPints	pints
+txtCups	cups
+txtOunces	Ounces
+txtLitres	litres
+txtDeciLitres	decilitres
+txtCentiLitres	centilitres
+txtMilliLitres	millilitres
+txtAmount	Amount
+txtVolumePercentage	Alcohol percentage (vol-%)
+txtUnit	Unit
+txtAddEntry	Add entry
+txtClearAll	Clear all
+txtAlcoholVolumePercentage	Alcohol volume percentage
+txtTotalAmount	Total amount
+txtTotalAmountUnit	Total amount in unit
+txtTitle	Drink calculator
+
+[fi-FI]
+txtGallons	gallonaa
+txtQuarts	varttigallonaa
+txtPints	pinttiä
+txtCups	kuppia
+txtOunces	unssia
+txtLitres	litraa
+txtDeciLitres	desilitraa
+txtCentiLitres	senttilitraa
+txtMilliLitres	millilitraa
+txtAmount	Määrä
+txtVolumePercentage	Alkoholiprosentti (vol-%)
+txtUnit	Yksikkö
+txtAddEntry	Lisää osa
+txtClearAll	Tyhjennä kaikki
+txtAlcoholVolumePercentage	Alkoholitilavuusprosentti
+txtTotalAmount	Määrä yhteensä
+txtTotalAmountUnit	Määrä yhteensä yksikössä
+txtTitle	Drinkkilaskin
