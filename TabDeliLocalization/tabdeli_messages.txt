@@ -6,7 +6,7 @@ txtGallons	gallons
 txtQuarts	quarts
 txtPints	pints
 txtCups	cups
-txtOunces	Ounces
+txtOunces	ounces
 txtLitres	litres
 txtDeciLitres	decilitres
 txtCentiLitres	centilitres
@@ -20,6 +20,7 @@ txtAlcoholVolumePercentage	Alcohol volume percentage
 txtTotalAmount	Total amount
 txtTotalAmountUnit	Total amount in unit
 txtTitle	Drink calculator
+txtKCal	Calories (kcal)
 
 [fi-FI]
 txtGallons	gallonaa
@@ -40,3 +41,4 @@ txtAlcoholVolumePercentage	Alkoholitilavuusprosentti
 txtTotalAmount	Määrä yhteensä
 txtTotalAmountUnit	Määrä yhteensä yksikössä
 txtTitle	Drinkkilaskin
+txtKCal	Kaloreita (kcal)

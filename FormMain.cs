@@ -42,6 +42,8 @@ namespace DrinkCalculator
             cmbAlcoholUnit.ComboBox!.ValueMember = "key";
             cmbAlcoholUnit.ComboBox!.DisplayMember = "value";
 
+            //Localization.OverrideLocale = "fi";
+
             Localization.GetLocalizedTexts(Properties.Resources.tabdeli_messages);
 
             LocalizeUi();
@@ -72,6 +74,7 @@ namespace DrinkCalculator
             tslTotalVolume.ToolTipText = Localization.GetMessage("txtTotalAmount", "Total amount");
 
             cmbAlcoholUnit.ToolTipText = Localization.GetMessage("txtTotalAmountUnit", "Total amount unit");
+            lbCalories.Text = Localization.GetMessage("txtKCal", "Calories (kcal)") + @":";
         }
 
         private readonly List<DrinkItem> drinkItems = new();
@@ -85,6 +88,7 @@ namespace DrinkCalculator
         {
             tslAlcoholVolumePercentage.Text = $@"{DrinkItem.CalculateItems(drinkItems.ToArray()):F2} %";
             tslTotalVolume.Text = $@"{DrinkItem.TotalVolume(((KeyValuePair<UnitsEnum, string>)cmbAlcoholUnit.SelectedItem).Key, drinkItems.ToArray()):F2}";
+            tbCalories.Text = $@"{DrinkItem.TotalCalories(drinkItems.ToArray()):F1}";
         }
 
         private void ItemClose(object? sender, EventArgs e)

@@ -41,6 +41,9 @@ namespace DrinkCalculator
             this.tslTotalVolume = new System.Windows.Forms.ToolStripLabel();
             this.tss3 = new System.Windows.Forms.ToolStripSeparator();
             this.cmbAlcoholUnit = new System.Windows.Forms.ToolStripComboBox();
+            this.tss4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbCalories = new System.Windows.Forms.ToolStripTextBox();
+            this.lbCalories = new System.Windows.Forms.ToolStripLabel();
             this.tlpMain.SuspendLayout();
             this.tsMain.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +55,7 @@ namespace DrinkCalculator
             this.pnDrinkControls.AutoScroll = true;
             this.pnDrinkControls.Location = new System.Drawing.Point(3, 28);
             this.pnDrinkControls.Name = "pnDrinkControls";
-            this.pnDrinkControls.Size = new System.Drawing.Size(530, 307);
+            this.pnDrinkControls.Size = new System.Drawing.Size(600, 307);
             this.pnDrinkControls.TabIndex = 4;
             // 
             // tlpMain
@@ -69,7 +72,7 @@ namespace DrinkCalculator
             this.tlpMain.RowCount = 2;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMain.Size = new System.Drawing.Size(564, 338);
+            this.tlpMain.Size = new System.Drawing.Size(639, 338);
             this.tlpMain.TabIndex = 7;
             // 
             // tsMain
@@ -82,10 +85,13 @@ namespace DrinkCalculator
             this.tss2,
             this.tslTotalVolume,
             this.tss3,
-            this.cmbAlcoholUnit});
+            this.cmbAlcoholUnit,
+            this.tss4,
+            this.lbCalories,
+            this.tbCalories});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(564, 25);
+            this.tsMain.Size = new System.Drawing.Size(639, 25);
             this.tsMain.TabIndex = 0;
             // 
             // tsbAddEntry
@@ -145,11 +151,30 @@ namespace DrinkCalculator
             this.cmbAlcoholUnit.ToolTipText = "Total amount unit";
             this.cmbAlcoholUnit.SelectedIndexChanged += new System.EventHandler(this.ItemValueChanged);
             // 
+            // tss4
+            // 
+            this.tss4.Name = "tss4";
+            this.tss4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tbCalories
+            // 
+            this.tbCalories.Name = "tbCalories";
+            this.tbCalories.ReadOnly = true;
+            this.tbCalories.Size = new System.Drawing.Size(80, 25);
+            this.tbCalories.Text = "0.0";
+            this.tbCalories.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbCalories
+            // 
+            this.lbCalories.Name = "lbCalories";
+            this.lbCalories.Size = new System.Drawing.Size(84, 22);
+            this.lbCalories.Text = "Calories (kcal):";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 362);
+            this.ClientSize = new System.Drawing.Size(663, 362);
             this.Controls.Add(this.tlpMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
@@ -174,6 +199,9 @@ namespace DrinkCalculator
         private System.Windows.Forms.ToolStripLabel tslTotalVolume;
         private System.Windows.Forms.ToolStripSeparator tss3;
         private System.Windows.Forms.ToolStripComboBox cmbAlcoholUnit;
+        private System.Windows.Forms.ToolStripSeparator tss4;
+        private System.Windows.Forms.ToolStripLabel lbCalories;
+        private System.Windows.Forms.ToolStripTextBox tbCalories;
     }
 }
 

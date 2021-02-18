@@ -56,6 +56,7 @@ namespace DrinkCalculator
             lbLiquidAmount.Text = Localization.GetMessage("txtAmount", "Amount");
             lbVolumePercentage.Text = Localization.GetMessage("txtVolumePercentage", "Alcohol percentage (vol-%)");
             lbUnit.Text = Localization.GetMessage("txtUnit", "Unit");
+            lbCalories.Text = Localization.GetMessage("txtKCal", "Calories (kcal)");
 
             foreach (var value in (UnitsEnum[])Enum.GetValues(typeof(UnitsEnum)))
             {
@@ -222,10 +223,45 @@ namespace DrinkCalculator
         }
 
         /// <summary>
+        /// The amount of grams in a litre of alcohol.
+        /// </summary>
+        public const decimal GramsPerLitre = 0.7894m * 1000;
+
+        /// <summary>
+        /// The amount of kilo calories (kcal) in a gram of alcohol.
+        /// </summary>
+        public const decimal KiloCaloriesPerGram = 7m;
+
+        /// <summary>
+        /// Gets the total amount of kilo calories (kcal) of the alcohol amount in the drink.
+        /// </summary>
+        /// <value>The total alcohol calories.</value>
+        [Browsable(false)]
+        public decimal TotalAlcoholCalories =>
+            AlcoholAmountInUnits(UnitsEnum.Litre) * GramsPerLitre * KiloCaloriesPerGram;
+
+        /// <summary>
+        /// Gets the total amount of kilo calories (kcal) of the specified <see cref="DrinkItem"/> instances.
+        /// </summary>
+        /// <param name="items">The items.</param>
+        /// <returns>The total amount of kilo calories (kcal) of the specified <see cref="DrinkItem"/> instances.</returns>
+        public static decimal TotalCalories(params DrinkItem[] items)
+        {
+            var result = 0m;
+
+            foreach (var drinkItem in items)
+            {
+                result += drinkItem.TotalAlcoholCalories;
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Gets the default size of the control.
         /// </summary>
         /// <value>The default size.</value>
-        protected override Size DefaultSize => new(530, 50);
+        protected override Size DefaultSize => new(600, 50);
 
         private void pnCloseBox_Click(object sender, EventArgs e)
         {
@@ -248,6 +284,7 @@ namespace DrinkCalculator
         private void control_ValueChanged(object sender, EventArgs e)
         {
             ValueChanged?.Invoke(this, EventArgs.Empty);
+            tbCalories.Text = $@"{TotalAlcoholCalories:F1}";
         }
     }
 }
