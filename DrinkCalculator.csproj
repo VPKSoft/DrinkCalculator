@@ -9,6 +9,7 @@
     <ApplicationIcon>soft-drink.ico</ApplicationIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>soft-drink.png</PackageIcon>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
